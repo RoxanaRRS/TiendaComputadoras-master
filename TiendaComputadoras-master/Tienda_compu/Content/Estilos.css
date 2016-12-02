@@ -1,0 +1,280 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
+/*INICO DEL LOGO */
+/* CAJA PARA CABEZA */
+#box { 
+      width:400px;
+      margin:auto;
+      position:relative;
+      top:40px;
+      left:84px;
+    }
+
+/* DROID */
+
+#cab {
+    width:142px;
+    height:60px;
+    border-radius:5em 5em 0 0;      
+    position:relative;
+    left:45px;
+    top:10px;
+}
+
+.a {
+   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 43%, rgba(0,255,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff00', endColorstr='#ffffff',GradientType=0 ); /* DEGRADADO */
+    border:0px solid #FFF;
+    border-radius:2em;   
+    }
+
+/* INTERIOR CABEZA */
+
+.ojo { 
+      position:relative; 
+      font-size:2em; 
+      color:#FFF; 
+      top:10px;
+}
+
+#ojoizq, #ojoder { 
+      -webkit-animation: ojoanim 5s ease 0 infinite;
+      -moz-animation: ojoanim 5s ease 0 infinite;
+      -o-animation: ojoanim 5s ease 0 infinite;
+}
+
+#ojoizq { left:20px }
+#ojoder { left:50px }
+
+@-webkit-keyframes ojoanim {
+      49% { opacity:1 }
+      50%, 51% { opacity:0 }
+      52% { opacity:1 }
+}
+
+@-moz-keyframes ojoanim {
+      49% { opacity:1 }
+      50%, 51% { opacity:0 }
+      52% { opacity:1 }
+}
+
+/* ANTENAS */
+
+#antenaizq, #antenader {
+      width:5px;
+      height:25px;
+      background:00ff00;
+      border:0px solid #FFF;
+      float:left;
+      top:-5px;
+      position:relative;
+      border-radius:2px;
+    }
+
+#antenaizq { 
+      position:relative;
+      left:80px;
+      -webkit-animation: antenaizq 2s ease 0 infinite alternate-reverse;
+      
+}
+
+@-webkit-keyframes antenaizq {
+      0% {
+        transform:rotate(0deg);
+      }
+  50% {transform:rotate(-15deg);
+  }
+  100% {
+    transform:rotate(-35deg);
+  }
+}
+
+#antenader { 
+   left:135px;
+   -webkit-animation: antenader 2s ease 0 infinite alternate-reverse;
+/* ANIMACION ANTENA DERECHA */
+}
+
+@-webkit-keyframes antenader {
+      0% {
+        transform:rotate(0deg);
+      }
+  50% {
+    transform:rotate(15deg);
+  }
+  100% {
+    transform:rotate(35deg);
+  }
+}
+
+/* FIN DEL LOGO */
+/* ----------------------------- */
+
+/* CABECERA */
+#header {
+background-color:#2d2d2d;
+color: #ECE9E6;
+padding:1em;
+box-shadow: 0 0 155px rgba(0,0,0,0.75) inset;
+}
+
+#header h1 {
+text-align: center;
+font: 70px;
+font-weight: 500;
+margin: 1em;
+
+}
+
+h1 {
+display: block;
+font-size: 3em;
+font-weight: bold;
+}
+
+/* PAGINA */
+#page #content {
+border: 0;
+padding: 0;
+max-width: 1024px;
+margin: auto;
+}
+
+/* MENU NAVEGACION */
+nav ul {
+  margin:0; /* PAGINA SIN MARGENES */
+  padding:1em;
+  left:0;
+  right:0;
+  list-style-type:none; /* Quitar lista */
+  font-family:"Open Sans";
+}
+
+#menu {
+  display:table;
+  overflow:hidden;
+  width:100%;
+  background:#2d2d2d;
+  position:relative;
+}
+
+#menu li {
+  display:table-cell;
+} /* COLOCA MENU EN CELDAS */
+
+#menu li a {
+  color:#fff;
+  dispaly:block; /* CAMBIAR ANCHO Y ALTO DEL ELEMENTO a */
+  line-heigth:20px;
+  padding:20px;
+  position:relative;
+  text-align:center;
+  text-decoration:none;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+#nenu a:hover {
+  background:#5da5a2;
+  display: block;
+}
+
+/* COLOCAR ICONOS HACIA EL FONDO PARA LA ANIMACION */
+nav > ul > li > a span {
+  background:#174459;
+  display:block; /* LOS ICONOS LOS QUITAMOS COMO ELEMENTOS EN LINEA */
+  height:100%;
+  width:100%;
+  left:0px;
+  position:absolute;
+  top:-55px;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+/* CENTRAR ICONOS */
+nav > ul > li > a span .fa {
+  diaplay:block;
+  padding:2em;
+  position:center;
+}
+
+/* ICONOS BAJEN AL PASAR EL PUNTERO */
+/* SE ACCEDE AL ELEMENTO a Y CUANDO PASEMOS EL
+PUNTERO SOBRE EL ELEMENTO a LOS CAMBIOS SE VAN A APLICAR AL ELMENTO span */
+nav > ul > li > a:hover > span {
+  top:0;
+}
+/* -------------------------------------- */
+
+/* INICIO SUB-MENU */
+.list:hover {
+  display: block; /* INDICA QUE AL PASAR EL PUNTERO POR EL ELEMENTO li MUESTRE EL ELMENTO ul */
+}
+
+#submenu {
+  display: none;
+  position:absolute;
+  background:#fff; /* PROBLEMA BARRA NEGRA */
+  overflow:hidden; /* LOS ELEMENTOS NO QUEDEN FUERA */
+  left:0;
+  rigth:0;
+  height:0%;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease; 
+}
+
+/* COLORES FONDO ICONOS */
+.color1 {
+  background:#6ECFCF;
+}
+.color2 {
+  background:#4FC44F;
+}
+.color3 {
+  background:#C35B4B;
+}
+.color4 {
+  background:#D98CD5;
+}
+.color5 {
+  background:#C8995B;
+}
+/* FIN SUB-MENU */
+
+/* INICIO BODY */
+#content { 
+display: block;
+}
+
+h2 {
+font: 48px;
+letter-spacing: -1pt;
+font-weight: 600;
+color: #2d2d2d;
+text-align: center;
+}
+
+/* FIN DEL BODY */
+
+/* FOOTER */
+footer p {
+margin: 0;
+padding: 0;
+}
+footer {
+background: #2d2d2d;
+color: #eee;
+font: 16px 'Open Sans';
+text-align: center;
+}
+
+
